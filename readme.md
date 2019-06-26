@@ -13,3 +13,11 @@
 ## koa-bodyparser
 
  - 处理post请求携带的表单数据
+
+## 项目结构划分
+
+ - views 视图
+ - routers 路由
+ - controller 控制层
+ - model 数据库
+ - server 业务逻辑
