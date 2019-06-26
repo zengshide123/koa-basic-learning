@@ -21,6 +21,7 @@
  - controller 控制层
  - model 数据库
  - server 业务逻辑
+ - middlewares 自定义中间件
 
 ## koa-nunjucks-2
 

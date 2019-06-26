@@ -4,9 +4,12 @@ const routers = require('./routers');
 const koaNunjucks = require('koa-nunjucks-2');
 const path = require('path');
 const koaStatic = require('koa-static');
+const middlewares = require('./middlewares');
+
+// 挂载中间件
+middlewares(app);
 
 // 静态资源处理
-
 app.use(koaStatic(path.join(__dirname,'static')))
 
 // 引入模板引擎
