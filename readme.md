@@ -29,3 +29,7 @@
 ## koa-static 
 
     静态资源目录
+
+## ikcamp-demo
+
+    一个应用现有结构,实现的一个小demo(资源来自ikcamp)
