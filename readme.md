@@ -21,3 +21,11 @@
  - controller 控制层
  - model 数据库
  - server 业务逻辑
+
+## koa-nunjucks-2
+
+    模板引擎用来做数据渲染
+
+## koa-static 
+
+    静态资源目录

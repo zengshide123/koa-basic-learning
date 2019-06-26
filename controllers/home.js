@@ -1,8 +1,21 @@
 module.exports = {
     handleGet:async (ctx,next)=>{
-        ctx.response.body = `home index page`
+        await  ctx.render("index",{
+            btnName:'登录'
+        })
     },
     handlePost:async (ctx,next)=>{
-        ctx.response.body = `请求数据为${JSON.stringify(ctx.request.body)}`
+        let {name,password} = ctx.request.body;
+        if(name==="admin"&&password==="admin"){
+            // ctx.response.body = `<h3>登录成功</h3>`
+           await ctx.render("admin",{
+                status:true
+            })
+        }else{
+            // ctx.response.body = `<h3>用户名或密码错误</h3>`
+          await  ctx.render("admin",{
+                status:false
+            })
+        }
     }
 }
