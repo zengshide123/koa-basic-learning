@@ -680,6 +680,10 @@ http-assert@^1.3.0:
     deep-equal "~1.0.1"
     http-errors "~1.7.2"
 
+http-error@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.npm.taobao.org/http-error/download/http-error-0.0.6.tgz#bff309b0bdafe30d95fbb73ac2dd2bdd39bbc074"
+
 http-errors@1.7.3, http-errors@^1.3.1, http-errors@^1.6.3, http-errors@~1.7.2:
   version "1.7.3"
   resolved "https://registry.npm.taobao.org/http-errors/download/http-errors-1.7.3.tgz#6c619e4f9c60308c38519498c14fbb10aacebb06"

@@ -6,9 +6,6 @@ const path = require('path');
 const koaStatic = require('koa-static');
 const middlewares = require('./middlewares');
 
-// 挂载中间件
-middlewares(app);
-
 // 静态资源处理
 app.use(koaStatic(path.join(__dirname,'static')))
 
@@ -20,6 +17,9 @@ app.use(koaNunjucks({
       trimBlocks: true
     }
   }));
+
+// 挂载中间件
+middlewares(app);
 
 // 添加 post请求数据处理
 const bodyParser = require('koa-bodyparser');
