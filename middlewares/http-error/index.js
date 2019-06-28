@@ -22,12 +22,13 @@ module.exports = (opt={})=>{
                         filename = status;    
                         break;
                     default:
+                        filename = 'default';
                         break;
                 }
             }else{
                 status = 500;
                 filename = status;    
-            }          
+            }                     
             const env = opt.env || process.env.NODE_ENV || 'development'            
             const filePath =  path.join(folder, `${filename}.html`);
             nunjucks.configure( folder ? folder : __dirname )
@@ -37,7 +38,6 @@ module.exports = (opt={})=>{
               error: error.message,
               stack: error.stack 
             })
-            console.log(filePath);
             
             // 赋值给响应体
             ctx.status = status

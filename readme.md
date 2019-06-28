@@ -42,3 +42,23 @@
 ## http-error
 
     对请求错误自定义处理
+
+## mongoose
+
+    用于对 mongodb 数据库进行操作
+
+## bcrypt
+
+    密码加密
+
+## jsonwebtoken
+
+    登录成功后 下发token
+
+## koa-passport 和 passport-jwt
+
+    对权限接口 进行 token 验证
+
+## validator
+
+    表单数据校验

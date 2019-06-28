@@ -5,7 +5,15 @@ const koaNunjucks = require('koa-nunjucks-2');
 const path = require('path');
 const koaStatic = require('koa-static');
 const middlewares = require('./middlewares');
+const linkdb = require('./server/linkdb');
+const passport = require('koa-passport');
 
+// 使用鉴权中间件
+app.use(passport.initialize());
+require('./server/vertifyToken')(passport);
+
+// 连接数据库
+  linkdb();
 // 静态资源处理
 app.use(koaStatic(path.join(__dirname,'static')))
 

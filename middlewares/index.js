@@ -2,6 +2,8 @@ const sendJson = require('./sendJson');
 const logger = require('./log');
 const httpError = require('./http-error');
 const path = require('path');
+const validator = require('./validator');
+
 
 module.exports = (app)=>{
     app.use(httpError({
@@ -9,6 +11,7 @@ module.exports = (app)=>{
     }));
     app.use(logger());
     app.use(sendJson());
+    app.use(validator());
     // 监听中间件错误
     app.on("error", (err, ctx) => {
         if (ctx && !ctx.headerSent && ctx.status < 500) {

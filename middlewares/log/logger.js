@@ -35,12 +35,6 @@ module.exports = () => {
 
     const stime = +new Date();
     const logger = log4js.getLogger("cheese");
-    logger.trace("Entering cheese testing");
-    logger.debug("Got cheese.");
-    logger.info("Cheese is Gouda.");
-    logger.warn("Cheese is quite smelly.");
-    logger.error("Cheese is too ripe!");
-    logger.fatal("Cheese was breeding ground for listeria.");
     methods.forEach(method => {
       contextLogger[method] = message => {
         logger[method](message);
